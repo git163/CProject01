@@ -1,0 +1,11 @@
+file(GLOB SRC_FILES "${CMAKE_CURRENT_LIST_DIR}/*.cpp")
+
+target_sources(loglib
+	PUBLIC
+	${SRC_FILES}
+)
+
+target_include_directories(loglib
+	PUBLIC
+	"${CMAKE_CURRENT_LIST_DIR}/include"
+)

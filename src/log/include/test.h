@@ -2,8 +2,8 @@
 #include<string>
 #include<vector>
 
-int main()
+class Test
 {
-	std::cout << "hello world\n";
-	return 0;
-}
+public:
+	int Print();
+};

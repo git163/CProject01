@@ -1,14 +1,9 @@
 ﻿cmake_minimum_required (VERSION 2.7)
-
+set(CMAKE_CXX_STANDARD 17)
 project(cmake_project)
 
-set(SRC_DIR "${CMAKE_CURRENT_LIST_DIR}/src")
-set(MAIN_DIR "${SRC_DIR}/main")
-set(INCLUDE_DIR "${SRC_DIR}/include")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
 
-file(GLOB INCLUDE_DIR_FILES "${INCLUDE_DIR}/*.h")
-file(GLOB SRC_FILES "${MAIN_DIR}/*.cpp")
-
-include_directories(${INCLUDE_DIR_FILES})
-
-add_executable(hello ${SRC_FILES})
+include("src/CMakeLists.txt")
