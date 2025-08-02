@@ -11,6 +11,4 @@ file(GLOB SRC_FILES "${MAIN_DIR}/*.cpp")
 
 include_directories(${INCLUDE_DIR_FILES})
 
-message("==${INCLUDE_DIR_FILES}==\n")
-message("==${SRC_FILES}==\n")
 add_executable(hello ${SRC_FILES})
